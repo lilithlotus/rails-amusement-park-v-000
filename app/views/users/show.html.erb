@@ -4,3 +4,8 @@ Tickets <%= @user.tickets %>
 Nausea <%= @user.nausea %>
 Happiness <%= @user.happiness %>
 Height <%= @user.height %>
+<% if @user.admin %>
+<%= "ADMIN" %>
+<% end %>
+<%= link_to "Log Out", signout_url %>
+<%= link_to "See attractions", attractions_path %>
