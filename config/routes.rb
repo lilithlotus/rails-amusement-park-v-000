@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get '/signout',  to: 'sessions#destroy'
   resources :users
   resources :attractions
-  resources :rides
+  post 'rides/new', to: 'rides#new'
 end
