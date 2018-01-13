@@ -1,4 +1,6 @@
-
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
 
 <%= @user.name %>
 Mood <%= @user.mood %>
