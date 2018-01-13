@@ -13,7 +13,7 @@ class Ride < ActiveRecord::Base
      "Sorry. You are not tall enough to ride the #{self.attraction.name}."
     else
       #binding.pry
-      @user = User.find_by(id: session[:user_id])
+      @user = User.find_by(id: user_id)
       new_tickets = self.user.tickets - self.attraction.tickets
       new_happiness = self.user.happiness + self.attraction.happiness_rating
       new_nausea = self.user.nausea + self.attraction.nausea_rating
